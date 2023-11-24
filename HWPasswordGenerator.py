@@ -1,7 +1,7 @@
 # Task Advanced: Create a Password Generator for Linux Users
 
 # Your task is to create a password generator program using Python specifically designed for Linux users.
-#     The program should generate strong and secure passwords that can be used for user accounts on Linux systems.
+# The program should generate strong and secure passwords that can be used for user accounts on Linux systems.
 
 # Requirements:
 
@@ -46,6 +46,6 @@ if special:
 
 for x in range(length):
     password = "".join(random.sample(allsymb, length))
-print(password)
+print("Generated password: ", (password))
 
 input()
