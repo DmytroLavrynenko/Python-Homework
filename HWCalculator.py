@@ -25,8 +25,22 @@
 print("Welcome to the Calculator Program!")
 next_operation = 'y'
 while next_operation == 'y':
-    number1 = float(input("Please enter the first number: "))
-    number2 = float(input("Please enter the second number: "))
+    while True:
+        number1 = input("Please enter the first number: ")
+        try:
+            number1 = float(number1)
+            break
+        except ValueError:
+            print("Error. Please use numbers only")
+            print()
+    while True:
+        number2 = input("Please enter the second number: ")
+        try:
+            number2 = float(number2)
+            break
+        except ValueError:
+            print("Error. Please use numbers only")
+            print()
     operation = input("Please select an operation: +, -, *, /: ")
     if operation == '+':
         print(number1 + number2)
@@ -35,7 +49,7 @@ while next_operation == 'y':
     elif operation == '*':
         print(number1 * number2)
     elif operation == '/':
-        print(number1 / number2 if number2 >
+        print(number1 / number2 if number2 !=
               0 else "Error. You cant divide by zero. Please select another operation")
     else:
         print("Error. There is no such operation. Please select another operation")
